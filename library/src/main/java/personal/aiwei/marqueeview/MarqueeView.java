@@ -134,10 +134,8 @@ public class MarqueeView extends ViewGroup {
             mIndex = INDEX_INIT;
         } else {
             mIndex += offset;
-            if (mIndex < 0) {
-                while (mIndex < 0) {
-                    mIndex += mAdapter.getCount();
-                }
+            while (mIndex < 0) {
+                mIndex += mAdapter.getCount();
             }
         }
     }
